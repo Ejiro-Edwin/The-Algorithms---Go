@@ -16,7 +16,7 @@ import (
 
 func naivePatternSearch(text string, pattern string) []int {
 	var positions []int
-	for i := 0; i < len(text)-len(pattern); i++ {
+	for i := 0; i <= len(text)-len(pattern); i++ {
 		var match bool = true
 		for j := 0; j < len(pattern); j++ {
 			if text[i+j] != pattern[j] {
